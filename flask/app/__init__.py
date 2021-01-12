@@ -22,4 +22,16 @@ def create_app():
     from app.department.views import department
     app.register_blueprint(department, url_prefix='/v1/department')
 
+    from flask_swagger_ui import get_swaggerui_blueprint
+    swagger_url = '/swagger'
+    api_url = '/static/swagger.json'
+    swagger_ui_blueprint = get_swaggerui_blueprint(
+        swagger_url,
+        api_url,
+        config={
+            'app_name': 'Flask-1'
+        }
+    )
+    app.register_blueprint(swagger_ui_blueprint, url_prefix=swagger_url)
+
     return app
