@@ -1,4 +1,7 @@
-# ac-code
+The repository contains 2 flask applications with the below mentioned functionality:
+1. App - Basic CRUD operation using Flask + SQL Alchemy
+2. App JWT - User authentication using Flask with JWT based authentication
+
 
 Please follow the steps for running the code (with assumption that python is installed):
 
